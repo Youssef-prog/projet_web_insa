@@ -52,3 +52,19 @@ ul, ol {
     margin-left: 20%;
     margin-right: 21%;
 }
+
+footer{
+
+    background:#ccc;
+    position:absolute;
+    bottom:0;
+    width:100%;
+    padding-top:50px;
+    height:35%;
+    
+    
+}
+
+body{
+    background-image: url("../image/background_contact.png");
+}
