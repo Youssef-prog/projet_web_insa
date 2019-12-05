@@ -4,6 +4,12 @@
      background: #aaa;
 }
 
+.img{
+   
+    width:800px;
+    height:380px;
+   
+}
 .col-center-block {
     float: none;
     display: block;
