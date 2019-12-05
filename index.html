@@ -36,12 +36,28 @@
   </nav>
 
   <style>
-		#monimage{
-   background: url(Images/world_card.png) no-repeat;
-   width: 1200px;
-   height: 630px;
-	}
-    </style>
+    body {
+    background-color:black;
+    background-image:url(Images/stars.jpg);
+    background-repeat: repeat;
+    }
+
+.relative2 {
+  position: relative;
+  top: 500px;
+  }
+
+  
+.degrade {
+    font-size: 50px;
+    background: -webkit-gradient(linear, center top, center bottom, from(#ccffff), to(#003366));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+  </style>
+
+  
+
     
   
   
@@ -49,6 +65,7 @@
 </head>
 
 <body>
-    <div id="monimage"></div>
+    
+    <marquee behavior="alternate" scrollamount="7" style="color:white;" class="relative2 degrade"  ><font size="15"><font face="Times New Roman">Universal Consulting Company</font></font></marquee>
 </body>
 </html>
