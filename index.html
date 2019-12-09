@@ -8,9 +8,13 @@
   <meta name="description" content="contact page">
   <meta name="author" content="Youssef Amari">
   
-  <link rel="stylesheet" href="bootstrap/css/bootstrap.css"> 
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">  
+  <link rel="stylesheet" href="contact/css/contact.css">
 
+  <!--NAV BAR-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!--go to index.html our main page-->
     <a class="navbar-brand" href="../index.html">Home</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -19,21 +23,26 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="../services/services.html">Service</a>
+          <!--go to services.html into the directory services-->
+          <a class="nav-link" href="services/services.html">Service</a>
         </li>
         <li class="nav-item active">
-            <a class="nav-link" href="../equipe/equipe.html">Equipe</a>
+          <!--go to equipe.html into the directory equipe-->
+            <a class="nav-link" href="equipe/equipe.html">Equipe</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="../contact/contact.html">Contact</a>
+          <!--go to contact.html into the directory contact-->
+            <a class="nav-link" href="contact/contact.html">Contact</a>
           </li>
-      </ul>
+      </ul> 
+      <!--search functionnality, not implemented yet-->
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
     </div>
   </nav>
+  <!--END OF NAV BAR-->
 
   <style>
     body {
@@ -44,7 +53,7 @@
 
 .relative2 {
   position: relative;
-  top: 500px;
+  top: 400px;
   }
 
   
@@ -54,18 +63,68 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-  </style>
 
-  
 
-    
-  
-  
+#footer_to_bottom{
+    width: 100%;
+    margin-bottom: 50%;
+}
+  </style>  
 
 </head>
 
 <body>
     
     <marquee behavior="alternate" scrollamount="7" style="color:white;" class="relative2 degrade"  ><font size="15"><font face="Times New Roman">Universal Consulting Company</font></font></marquee>
+      <!--END OF FORM-->
+
+  <div id="footer_to_bottom"></div>
+  <!--FOOTER-->
+  <footer class="section footer-classic context-dark bg-image" style="background:#212529 ;">
+    <div class="container">
+      <div class="row row-30">
+        <div class="col-md-4 col-xl-5">
+          <div class="pr-xl-4"><a class="brand" href="../index.html"><img class="brand-logo-light" src="contact/image/globe.png" alt="company logo" width="60" height="60"></a>
+            <p>We are an award-winning creative agency, dedicated to the best result in web design, promotion, business consulting, and marketing.</p>
+            <!-- Rights-->
+            <p class="rights"><span>©  </span><span class="copyright-year">2018</span><span> </span><span>Waves</span><span>. </span><span>All Rights Reserved.</span></p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h5>Contacts</h5>
+          <dl class="contact-list">
+            <dt>Address:</dt>
+            <dd>798 South Park Avenue, Jaipur, Raj</dd>
+          </dl>
+          <dl class="contact-list">
+            <dt>email:</dt>
+            <dd><a href="mailto:#">dkstudioin@gmail.com</a></dd>
+          </dl>
+          <dl class="contact-list">
+            <dt>phones:</dt>
+            <dd><a>+330202020202</a> <span>or</span> <a>+330202020202</a>
+            </dd>
+          </dl>
+        </div>
+        <div class="col-md-4 col-xl-3">
+          <h5>Links</h5>
+          <ul class="nav-list">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../services/services.html">Service</a></li>
+            <li><a href="../equipe/equipe.html">Equipe</a></li>
+            <li><a href="../contact/contact.html">Contacts</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row no-gutters social-container">
+      <div class="col"><a  href="https://fr.linkedin.com/in/jean-christophe-sanchez-41b06b171?trk=people-guest_profile-result-card_result-card_full-click">Yang Yuyuan<img src="contact/image/yuyuan.ico" alt="Card image cap"></a></div>
+      <div class="col"><a  href="https://fr.linkedin.com/in/jean-christophe-sanchez-41b06b171?trk=people-guest_profile-result-card_result-card_full-click">Amari Youssef<img src="contact/image/youssef.ico" alt="Card image cap"></a></div>
+      <div class="col"><a  href="https://fr.linkedin.com/in/jean-christophe-sanchez-41b06b171?trk=people-guest_profile-result-card_result-card_full-click">Wang Yifan<img src="contact/image/yifan.ico" alt="Card image cap"></a></div>
+      <div class="col"><a  href="https://fr.linkedin.com/in/jean-christophe-sanchez-41b06b171?trk=people-guest_profile-result-card_result-card_full-click">Sanchez Jean-christophe<img src="contact/image/jc.ico" alt="Card image cap"></a></div>
+    </div>
+    
+  </footer>
+  <!--END OF FOOTER-->
 </body>
 </html>
