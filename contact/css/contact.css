@@ -11,9 +11,6 @@
     margin-right: 20%;
 }
 
-#footer{
-    margin-bottom:1px;
-}
 
 body{
     background-image: url("../image/background_contact.png");
@@ -63,3 +60,5 @@ ul, ol {
     visibility: hidden;
     transition: .22s ease;
 }
+
+
