@@ -1,0 +1,73 @@
+.fakeimg {
+    height: 200px;
+        background: #aaa;
+}
+.jc , .yi , .yu, .uc{
+    float: right;
+    width: 475px;
+    align: center;
+}
+
+h2{
+    font: 21px georgia regular;
+    color:  #ebe727;
+}
+.p1{
+    font: Myriad Pro regular 12px;
+    color:#ebcc1c;
+}
+.p2{
+height: 92px;
+color: white;
+font: 18px helvetica;
+}
+.p3{
+  color: white;
+}
+.imgDiv{
+    width: 299px;
+    height: 190px;
+    background: url(../img/8.png) no-repeat;
+    margin: 16px 0 10px;
+    text-align: center;
+    padding-top: 12px;
+}
+.lm{
+display: block;
+width: 163px;
+height: 140px;
+
+text-decoration: none;
+color: #016999;
+font: 12px/40px helvetica;
+text-indent: 1em;
+margin-bottom: 35px;
+}
+
+#divcss5{margin:0 auto} 
+
+footer{
+background:#ccc;
+position:absolute;
+bottom:0;
+width:100%;
+padding-top:50px;
+height:35%;
+
+}
+.context-dark, .bg-gray-dark, .bg-primary {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-classic a, .footer-classic a:focus, .footer-classic a:active {
+    color: #ffffff;
+}
+
+body {
+    background-image: url("image/background_contact.png");
+} 
+td{    text-align:center;}
+table{ border: 0px solid}
+.color1{
+background-color: #00ffff
+}

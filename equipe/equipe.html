@@ -14,6 +14,7 @@
     .jc , .yi , .yu, .uc{
         float: right;
         width: 475px;
+        align: center;
     }
 
     h2{
@@ -27,7 +28,10 @@
     .p2{
     height: 92px;
     color: white;
-    font: 13px helvetica;
+    font: 18px helvetica;
+    }
+    .p3{
+      color: white;
     }
     .imgDiv{
         width: 299px;
@@ -69,8 +73,14 @@
     }
 
     body {
-	background-image: url("image/background_contact.png");
+	    background-image: url("image/background_contact.png");
     } 
+    td{    text-align:center;}
+    table{ border: 0px solid}
+    .color1{
+    background-color: #00ffff
+  }
+  
     </style>
   <meta charset="utf-8">
 
@@ -121,49 +131,55 @@
 
 <body>
     <script src="js/scripts.js"></script>
-    <div id="divcss5">
-        <div id="divcss5" class="jumbotron text-center" style="margin-bottom:0">
-            <h1>Our Team</h1>
-        </div>
+        <div id="divcss5">
 
-        <div class="jc">
-            <a href="https://fr.linkedin.com/in/jean-christophe-sanchez-41b06b171?trk=people-guest_profile-result-card_result-card_full-click"><h2>Jean-christophe</h2></a>           
-            <p class="p1">CEO</p>
-            <div class="imgDiv">
-                <img src="image/jc.jpg" width="220" height="270">
-                <p class="p2">Doctor of Management in Oxford University</p>
-            </div>
+        <table border="0" align="center" style="border: 0;">
+          <tr>
+            <th colspan="4">
+              <div style="height:30px"></div>          
+              <div align="center">
+                  <h1 class="p3">Our Team</h1>
+              </div>
+            </th>
+          </tr>
+          <tr>
+            <td class="jc" style="border-bottom: none">
+              <div style="height:100px"></div>
+              <a href="https://fr.linkedin.com/in/jean-christophe-sanchez-41b06b171?trk=people-guest_profile-result-card_result-card_full-click"><h2>Jean-christophe</h2></a>           
+              <p class="p1">CEO</p>
+              <img src="image/jc.jpg" width="220" height="270" margin: 0 auto>
+              <div style="height:30px"></div> 
+              <p class="p2">Doctor of Management in Oxford University</p>
+            </td>
 
-        </div>
-        <div class="yi">
-            <a href="https://fr.linkedin.com/in/jean-christophe-sanchez-41b06b171?trk=people-guest_profile-result-card_result-card_full-click"><h2>Yifan</h2></a>
- 
-            <p class="p1">CTO</p>
-            <div class="imgDiv">
-                <img src="image/yifan.jpg" width="220" height="270">
-                <p class="p2">Doctor of Computer Sciences in Massachusetts Institute of Technology</p>
-            </div>
-        </div>
-        <div class="yu">
-            <a href="https://www.linkedin.com/in/yuyuan-yang-94844a155/"><h2> Yuyuan </h2></a>
+            <td class="yi">
+              <div style="height:100px">></div>
+              <a href="https://fr.linkedin.com/in/jean-christophe-sanchez-41b06b171?trk=people-guest_profile-result-card_result-card_full-click"><h2>Yifan</h2></a>
+              <p class="p1">CTO</p>
+              <img src="image/yifan.jpg" width="220" height="270">
+              <div style="height:30px"></div> 
+              <p class="p2">Doctor of Computer Sciences in Massachusetts Institute of Technology</p>
+            </td>
             
-            <p class="p1">CFO</p>
-            <div class="imgDiv">
-                <img src="image/yuyuan.jpg" width="220" height="270">
-                <p class="p2">Doctor of Finance in Oxford University</p>
-            </div>
-        </div>
-        <div class="uc">
-            <a href="https://fr.linkedin.com/in/jean-christophe-sanchez-41b06b171?trk=people-guest_profile-result-card_result-card_full-click"><h2>Youssef</h2></a>
-               
-                <p class="p1">COO</p>
-                <div class="imgDiv">
-                    <img src="image/youssef.jpg" width="220" height="270">
-                    <p class="p2">Doctor of Management Innovation in Harvard University</p>
-                </div>
+            <td class="yu">
+              <div style="height:100px"></divstyle>></div>
+              <a href="https://www.linkedin.com/in/yuyuan-yang-94844a155/"><h2> Yuyuan </h2></a>
+              <p class="p1">CFO</p>
+              <img src="image/yuyuan.jpg" width="220" height="270">
+              <div style="height:30px"></div> 
+              <p class="p2">Doctor of Finance in Oxford University</p>
+            </td>
 
-                
-        </div>
+            <td class="uc">
+              <div style="height:100px"></div>
+              <a href="https://fr.linkedin.com/in/jean-christophe-sanchez-41b06b171?trk=people-guest_profile-result-card_result-card_full-click"><h2>Youssef</h2></a>
+              <p class="p1">COO</p>
+              <img src="image/youssef.jpg" width="220" height="270">
+              <div style="height:30px"></div> 
+              <p class="p2">Doctor of Management Innovation in Harvard University</p>
+            </td>
+          </tr>
+      </table>
     </div>
 
 <!--FOOTER-->
