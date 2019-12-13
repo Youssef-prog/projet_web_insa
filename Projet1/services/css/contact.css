@@ -5,19 +5,6 @@
 .footer-classic a, .footer-classic a:focus, .footer-classic a:active {
     color: #ffffff;
 }
-
-#formulaire{        
-    margin-left: 20%;
-    margin-right: 20%;
-}
-
-
-body{
-    background-image: url("../image/background_contact.png");
-    background-attachment: fixed;
-}
-
-
 .nav-list li {
     padding-top: 5px;
     padding-bottom: 5px;
@@ -60,5 +47,3 @@ ul, ol {
     visibility: hidden;
     transition: .22s ease;
 }
-
-
