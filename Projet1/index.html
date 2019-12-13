@@ -3,15 +3,15 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-
+  <!--Implementation of a title-->
   <title>Universal Consulting Company</title>
   <meta name="description" content="contact page">
   <meta name="author" content="Youssef Amari">
-  
+  <!--Implementation of bootstrap-->
   <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
   <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">  
   <link rel="stylesheet" href="contact/css/contact.css">
-
+  <!--Warning, to use correctly the web page, please open it in full screen-->
   <!--NAV BAR-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <!--go to index.html our main page-->
@@ -24,15 +24,15 @@
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
           <!--go to services.html into the directory services-->
-          <a class="nav-link" href="services/services.html">Service</a>
+          <a class="nav-link" href="services/services.html">Services</a>
         </li>
         <li class="nav-item active">
           <!--go to equipe.html into the directory equipe-->
-            <a class="nav-link" href="equipe/equipe.html">Equipe</a>
+            <a class="nav-link" href="equipe/equipe.html">Team</a>
           </li>
           <li class="nav-item active">
           <!--go to contact.html into the directory contact-->
-            <a class="nav-link" href="contact/contact.html">Contact</a>
+            <a class="nav-link" href="contact/contact.html">Contacts</a>
           </li>
       </ul> 
       <!--search functionnality, not implemented yet-->
@@ -44,15 +44,21 @@
   </nav>
   <!--END OF NAV BAR-->
 
-  <style>
+
+  <!-- COMMENT OF STYLE TAG
+    First, implementation of an image in background
+      Then, regulation of the height of the text "Universal Consulting Company"
+      Then, implementation of degrade text color
+      And to finish, Implementation of the configuration of the footer-->
+  <style> 
     body {
     background-color:black;
-    background-image:url(Images/stars.jpg);
+    background-image:url(Images/stars.jpg); 
     background-repeat: repeat;
     }
 
 .relative2 {
-  position: relative;
+  position: relative; 
   top: 400px;
   }
 
@@ -74,20 +80,22 @@
 </head>
 
 <body>
-    
+    <!--BEGINNING OF THE FORM
+      Choice of the font size, the font face, the behaviour of the text "Universal Consulting Company"-->
     <marquee behavior="alternate" scrollamount="7" style="color:white;" class="relative2 degrade"  ><font size="15"><font face="Times New Roman">Universal Consulting Company</font></font></marquee>
       <!--END OF FORM-->
 
   <div id="footer_to_bottom"></div>
   <!--FOOTER-->
-  <footer class="section footer-classic context-dark bg-image" style="background:#212529 ;">
+  <footer class="section footer-classic context-dark bg-image" style="background:#212529 ;"> <!--Choice of color of footer background -->
     <div class="container">
-      <div class="row row-30">
+      <!--Choice of footer configuration-->
+      <div class="row row-30"> 
         <div class="col-md-4 col-xl-5">
-          <div class="pr-xl-4"><a class="brand" href="../index.html"><img class="brand-logo-light" src="contact/image/globe.png" alt="company logo" width="60" height="60"></a>
+          <div class="pr-xl-4"><a class="brand" href="index.html"><img class="brand-logo-light" src="contact/image/globe.png" alt="company logo" width="60" height="60"></a>
             <p>We are an award-winning creative agency, dedicated to the best result in web design, promotion, business consulting, and marketing.</p>
             <!-- Rights-->
-            <p class="rights"><span>©  </span><span class="copyright-year">2018</span><span> </span><span>Waves</span><span>. </span><span>All Rights Reserved.</span></p>
+            <p class="rights"><span>©  </span><span class="copyright-year">2019</span><span> </span><span>Waves</span><span>. </span><span>All Rights Reserved.</span></p>
           </div>
         </div>
         <div class="col-md-4">
@@ -108,15 +116,17 @@
         </div>
         <div class="col-md-4 col-xl-3">
           <h5>Links</h5>
+          <!--Implementation of links-->
           <ul class="nav-list">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../services/services.html">Service</a></li>
-            <li><a href="../equipe/equipe.html">Equipe</a></li>
-            <li><a href="../contact/contact.html">Contacts</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services/services.html">Services</a></li>
+            <li><a href="equipe/equipe.html">Team</a></li>
+            <li><a href="contact/contact.html">Contacts</a></li>
           </ul>
         </div>
       </div>
     </div>
+    <!--Implementation of links to LinkedIn user accounts-->
     <div class="row no-gutters social-container">
       <div class="col"><a  href="https://www.linkedin.com/in/yuyuan-yang-94844a155/">Yang Yuyuan<img src="contact/image/yuyuan.ico" alt="Card image cap"></a></div>
       <div class="col"><a  href="https://www.linkedin.com/in/youssef-amari-6aa4a3193/">Amari Youssef<img src="contact/image/youssef.ico" alt="Card image cap"></a></div>
