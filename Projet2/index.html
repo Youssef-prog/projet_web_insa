@@ -17,7 +17,7 @@
 		<div class="container">
 				
 					<div>
-						<h1>Work To-Dos</h1>
+						<h1>My task list</h1>
 						
 					</div>
 				
@@ -26,9 +26,16 @@
 		
 				<div>
 					<div>
-						<input id="userInput" type="text" placeholder="Votre tache">
-						<button id="enter">Ajouter une tâche</button>
+						<input id="userText" type="text" placeholder="Votre tache">
+						<button id="add" onclick="addToList()">Ajouter une tâche</button>
 					</div>
+					<div>
+						<input id="timeTask" type="number" placeholder="number of hours">
+					</div>
+					<div>
+						<input id="date" type="date" placeholder="my date" min="2012-12-22" max="2030-12-31">
+					</div>
+
 				</div>
 		
 				<!-- emplacement nécessaire à l'ajout des listes-->

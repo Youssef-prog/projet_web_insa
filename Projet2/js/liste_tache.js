@@ -1,65 +1,67 @@
-var enterButton = document.getElementById("enter");
-var input = document.getElementById("userInput");
-var ul = document.querySelector("ul");
-var item = document.getElementsByTagName("li");
 
-function inputLength(){
-	return input.value.length;
-} 
+function addToList() {
+	var enterButton = document.getElementById("add");
+	var txt = document.getElementById("userText").value;
+	var ul = document.querySelector("ul");
+	var item = document.getElementsByTagName("li"); 
+	var duration = document.getElementById("timeTask").value;
+	var tab = '\xa0\xa0\xa0\xa0\xa0\xa0\xa0';
+	var dateTime = document.getElementById("date").value;
 
-function listLength(){
-	return item.length;
-}
+	if(duration<= 0){
+		window.alert("numbers of hours must be a positive number !");
 
-function createListElement() {
-	var li = document.createElement("li"); // creates an element "li"
-	li.appendChild(document.createTextNode(input.value)); //makes text from input field the li text
-	ul.appendChild(li); //adds li to ul
-	input.value = ""; //Reset text input field
-
-
-	//START STRIKETHROUGH
-	// because it's in the function, it only adds it for new items
-	function crossOut() {
-		li.classList.toggle("done");
 	}
-
-	li.addEventListener("click",crossOut);
-	//END STRIKETHROUGH
-
-
-	// START ADD DELETE BUTTON
-	var dBtn = document.createElement("button");
-	dBtn.appendChild(document.createTextNode("X"));
-	li.appendChild(dBtn);
-	dBtn.addEventListener("click", deleteListItem);
-	// END ADD DELETE BUTTON
-
-
-	//ADD CLASS DELETE (DISPLAY: NONE)
-	function deleteListItem(){
-		li.classList.add("delete")
+	else if(txt.length < 2){
+		window.alert("task must be at least a string of two characters !");
 	}
-	//END ADD CLASS DELETE
-}
+	else{
+		var li = document.createElement("li"); // creates an element "li"
+		li.appendChild(document.createTextNode(txt)); //add the input text value in the li element
+		ul.appendChild(li); //add the li to the ul
+		txt.value = ""; //set the button field empty
+
+		//add the button to delete
+		var deleteButton = document.createElement("button");
+		deleteButton.appendChild(document.createTextNode("X"));
+		li.appendChild(deleteButton);
+		deleteButton.addEventListener("click", deleteElement);
+
+		//add timer for each task
+		var time = document.createElement("text");
+		time.appendChild(document.createTextNode( tab+"duration : "+duration+ "h"));
+		li.appendChild(time);
+
+		//add day and hour for the task
+		var mydate = document.createElement("text");
+		mydate.appendChild(document.createTextNode(tab+dateTime));
+		li.appendChild(mydate);
 
 
-function addListAfterClick(){
-	if (inputLength() > 0) { //makes sure that an empty input field doesn't create a li
-		createListElement();
+		//time remaining
+		/*var today = new Date();
+		var currentTime = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDay();
+		console.log(currentTime);
+		var dateTimeD = new Date();
+		dateTimeD = dateTime;
+		console.log(dateTimeD);
+		console.log(typeof(dateTimeD));
+		console.log(typeof(currentTime));
+		var timeR = dateTimeD - currentTime;
+		var timeRemain = document.createElement("text");
+		timeRemain.appendChild(document.createTextNode(tab+"time remainning (day): "+timeR));
+		li.appendChild(timeRemain);*/
+		
+		//function who delete the element in the list
+		function deleteElement(){
+			li.classList.add("delete");
+		}
+	
 	}
 }
 
-function addListAfterKeypress(event) {
-	if (inputLength() > 0 && event.which ===13) { //this now looks to see if you hit "enter"/"return"
-		//the 13 is the enter key's keycode, this could also be display by event.keyCode === 13
-		createListElement();
-	} 
-}
 
 
-enterButton.addEventListener("click",addListAfterClick);
 
-input.addEventListener("keypress", addListAfterKeypress);
 
 
