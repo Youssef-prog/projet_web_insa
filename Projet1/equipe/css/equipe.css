@@ -1,3 +1,4 @@
+
 .fakeimg {
     height: 200px;
         background: #aaa;
@@ -52,7 +53,7 @@ position:absolute;
 bottom:0;
 width:100%;
 padding-top:50px;
-height:35%;
+height:100px;
 
 }
 .context-dark, .bg-gray-dark, .bg-primary {
