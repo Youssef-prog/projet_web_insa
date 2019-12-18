@@ -112,25 +112,24 @@ function main() {
 		function deleteElement(){
 			li.classList.add("delete");
 		}
-
+		var state = 0;
 		function updateElement(){
-			var tmpText = document.getElementById("updatetext");
-			tmpText.setAttribute("style", "");
-			var tmpbutton = document.getElementById("update");
-			tmpbutton.setAttribute("style", "");
-		}
+			if(state == 0){
+				var tmpText = document.getElementById("updatetext");
+				tmpText.setAttribute("style", "");
 
+				var newtxt = document.getElementById("updatetext").value;
+				text.appendChild(document.createTextNode(newtxt));
+				newtxt.value = "";
+				state = 1;
+			}else if(state == 1){
+				//hide the text area and the button
+				var tmpText = document.getElementById("updatetext");
+				tmpText.setAttribute("style", "display:none");
+				state = 0;
+			}
+		}
 	}
 }
 
 
-function updateAndHide(){
-	//hide the text area and the button
-	var tmpText = document.getElementById("updatetext");
-	tmpText.setAttribute("style", "display:none");
-	var tmpbutton = document.getElementById("update");
-	tmpbutton.setAttribute("style", "display:none");
-
-	//Update the title of the task with the value in the text area
-	
-}
