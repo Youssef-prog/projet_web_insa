@@ -115,12 +115,13 @@ function main() {
 		var state = 0;
 		function updateElement(){
 			if(state == 0){
-				var tmpText = document.getElementById("updatetext");
-				tmpText.setAttribute("style", "");
+				
 
 				var newtxt = document.getElementById("updatetext").value;
 				text.appendChild(document.createTextNode(newtxt));
 				newtxt.value = "";
+				var tmpText = document.getElementById("updatetext");
+				tmpText.setAttribute("style", "");
 				state = 1;
 			}else if(state == 1){
 				//hide the text area and the button
