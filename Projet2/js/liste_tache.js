@@ -1,17 +1,10 @@
-class Date{
+class date{
 	constructor(jour, mois, year){
 		this.jour = jour;
 		this.month = mois;
 		this.year = year;
 	}
-	/*afficher(date d){
-		var string = String();
-		string  = d.year + "y " + d.month + "m " + d.jour +"d";
-		return string;
-	}*/
 }
-
-
 
 
 function diffString(string1, string2){
@@ -29,7 +22,7 @@ function diffString(string1, string2){
 	var diffday = nbday1 - nbday2;
 
 	
-	var dateF = Date(0,0,0);
+	var dateF = new date(0,0,0);
 
 	if(diffday >= 0){
 		while(diffday > 365){
@@ -39,8 +32,8 @@ function diffString(string1, string2){
 			diffday = diffday - 30;
 			dateF.month = datef.month +1;
 		}
-		datef.jour = diffday;
-		diff = d.year + "y " + d.month + "m " + d.jour +"d";
+		dateF.jour = diffday;
+		diff = dateF.year + "y " + dateF.month + "m " + dateF.jour +"d";
 		return diff;
 		
 	}else{
@@ -52,7 +45,7 @@ function diffString(string1, string2){
 
 }
 
-function addToList() {.23835616438
+function main() {
 	var enterButton = document.getElementById("add");
 	var txt = document.getElementById("userText").value;
 	var ul = document.querySelector("ul");
@@ -84,6 +77,13 @@ function addToList() {.23835616438
 		li.appendChild(deleteButton);
 		deleteButton.addEventListener("click", deleteElement);
 
+		//add the button to update the current task
+		var updatebutton = document.createElement("button");
+		updatebutton.setAttribute("style", "height:35px");
+		updatebutton.appendChild(document.createTextNode("Update"));
+		li.appendChild(updatebutton);
+		updatebutton.addEventListener("click", updateElement);
+
 		//add timer for each task
 		var time = document.createElement("text");
 		time.setAttribute("style", "");
@@ -113,5 +113,24 @@ function addToList() {.23835616438
 			li.classList.add("delete");
 		}
 
+		function updateElement(){
+			var tmpText = document.getElementById("updatetext");
+			tmpText.setAttribute("style", "");
+			var tmpbutton = document.getElementById("update");
+			tmpbutton.setAttribute("style", "");
+		}
+
 	}
+}
+
+
+function updateAndHide(){
+	//hide the text area and the button
+	var tmpText = document.getElementById("updatetext");
+	tmpText.setAttribute("style", "display:none");
+	var tmpbutton = document.getElementById("update");
+	tmpbutton.setAttribute("style", "display:none");
+
+	//Update the title of the task with the value in the text area
+	
 }

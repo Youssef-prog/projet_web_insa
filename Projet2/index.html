@@ -27,7 +27,9 @@
 				<div>
 					<div>
 						<input id="userText" type="text" placeholder="Votre tache">
-						<button id="add" onclick="addToList()">Ajouter une tâche</button>
+						<button id="add" onclick="main()">Ajouter une tâche</button>
+						<input id="updatetext" type="text" placeholder="Votre tache" style="display:none">
+						<button id="update" onclick="updateAndHide()" style="display:none">Update</button>
 					</div>
 					<div>
 						<input id="timeTask" type="number" placeholder="number of hours">
