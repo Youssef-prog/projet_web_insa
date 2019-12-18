@@ -1,16 +1,48 @@
+class Date{
+	constructor(jour, mois, year){
+		this.jour = jour;
+		this.month = mois;
+		this.year = year;
+	}
+	/*afficher(date d){
+		var string = String();
+		string  = d.year + "y " + d.month + "m " + d.jour +"d";
+		return string;
+	}*/
+}
+
+
+
+
 function diffString(string1, string2){
-	var diff;
 	var split1 = string1.split('-');
 	var split2 = string2.split('-');
-	var tmpDiffY = parseInt(split1[0])-parseInt(split2[0]);
-	var tmpDiffM = parseInt(split1[1])-parseInt(split2[1]);
-	var tmpDiffD = parseInt(split1[2])-parseInt(split2[2]);
-	if(tmpDiffY > 0 || (tmpDiffY==0 && tmpDiffM>0) || (tmpDiffY == 0 && tmpDiffM == 0 && tmpDiffD>0)){	
-		var charY = tmpDiffY.toString();
-		var charM = tmpDiffM.toString();
-		var charD = tmpDiffD.toString();
-		diff = charY +'y ' + charM + 'm ' + charD+ 'd';
+	var ansplit1 = (parseInt(split1[0]) - 2010) *365;
+	var monsplit1 = parseInt(split1[1]) * 30;
+	var daysplit1 = parseInt(split1[2]);
+	var ansplit2 = (parseInt(split2[0]) - 2010) *365;
+	var monsplit2 = parseInt(split2[1]) * 30;
+	var daysplit2 = parseInt(split2[2]);
+
+	var nbday1 = ansplit1 + monsplit1 + daysplit1;
+	var nbday2 = ansplit2 + monsplit2 + daysplit2;
+	var diffday = nbday1 - nbday2;
+
+	
+	var dateF = Date(0,0,0);
+
+	if(diffday >= 0){
+		while(diffday > 365){
+			diffday = diffday - 365;
+			dateF.year = dateF.year +1;
+		}while(diffday > 30){
+			diffday = diffday - 30;
+			dateF.month = datef.month +1;
+		}
+		datef.jour = diffday;
+		diff = d.year + "y " + d.month + "m " + d.jour +"d";
 		return diff;
+		
 	}else{
 		diff='no valid date';
 		window.alert("Votre tache a expiré !");
@@ -20,10 +52,7 @@ function diffString(string1, string2){
 
 }
 
-
-
-
-function addToList() {
+function addToList() {.23835616438
 	var enterButton = document.getElementById("add");
 	var txt = document.getElementById("userText").value;
 	var ul = document.querySelector("ul");
@@ -86,9 +115,3 @@ function addToList() {
 
 	}
 }
-
-
-
-
-
-
