@@ -10,13 +10,13 @@
 
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-
+ 
 </head>
 
 <body>
 		<div class="container">
 				
-					<div>
+					<div id="titre">
 						<h1>My task list</h1>
 						
 					</div>
@@ -24,7 +24,7 @@
 		
 				
 		
-				<div>
+				<div class="jsbody">
 					<div>
 						<input id="userText" type="text" placeholder="Votre tache">
 						<button id="add" onclick="main()">Ajouter une tâche</button>
@@ -49,5 +49,11 @@
 		
 			</div>
   <script src="js/liste_tache.js"></script>
+  <script src="js/snow.js"></script>
+  <script type="text/javascript">
+	window.onload = function(){
+		snow.init(10);
+	};
+</script>
 </body>
 </html>

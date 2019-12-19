@@ -14,3 +14,18 @@ li {
 li > button {
 	float: right;
 }
+body{
+    background-image: url("../image/Blue-Grunge-Background-Texture-.jpg");
+    background-attachment: fixed;
+}
+
+#titre{
+     margin-left: 45%;
+     color : white ;
+    
+}
+
+.jsbody{
+      margin-left: 40%;
+}
+

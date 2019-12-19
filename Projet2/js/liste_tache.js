@@ -63,7 +63,7 @@ function main() {
 	else{
 		var li = document.createElement("li"); // create li element
 		var text = document.createElement("text");// create text element
-		text.setAttribute("style", "font-size:25px; color:green");//add css style to the html object it s like addind a aattribute to the html
+		text.setAttribute("style", "font-size:25px; color:white");//add css style to the html object it s like addind a aattribute to the html
 		text.appendChild(document.createTextNode(txt));// adding the user text to the text element
 		li.appendChild(text); //add the input text value in the li element
 		ul.appendChild(li); //add the li to the ul
@@ -85,13 +85,13 @@ function main() {
 
 		//add timer for each task
 		var time = document.createElement("text");
-		time.setAttribute("style", "");
+		time.setAttribute("style", "color:white");
 		time.appendChild(document.createTextNode( tab+"duration : "+duration+ "h"));
 		li.appendChild(time);
 
 		//add day and hour for the task
 		var mydate = document.createElement("text");
-		mydate.setAttribute("style", "color:" + "blue");
+		mydate.setAttribute("style", "color:white");
 		mydate.appendChild(document.createTextNode(tab+dateTime));
 		li.appendChild(mydate);
 
@@ -125,7 +125,7 @@ function main() {
 				//create the new title task
 				var ntext = document.createElement("text");
 				//put the same css in order to have the same display
-				ntext.setAttribute("style", "float: left;font-size:25px; color:green");
+				ntext.setAttribute("style", "float: left;font-size:25px; color:#f7e80b");
 				//add the text
 				ntext.appendChild(document.createTextNode(newtxt));
 				//add to the element that is a task
@@ -144,5 +144,10 @@ function main() {
 		}
 	}
 }
+
+
+
+
+
 
 
