@@ -1,3 +1,4 @@
+//class date which has one constructor to set a day; month and a year
 class date{
 	constructor(jour, mois, year){
 		this.jour = jour;
@@ -6,60 +7,58 @@ class date{
 	}
 }
 
-
+// function which return string which correspondes to a date and which is the difference between the two string whiche are also date
 function diffString(string1, string2){
-	var split1 = string1.split('-');
+	var split1 = string1.split('-');//parse the string whith '-' because string format is 2019-12-10
 	var split2 = string2.split('-');
-	var ansplit1 = (parseInt(split1[0]) - 2010) *365;
-	var monsplit1 = parseInt(split1[1]) * 30;
-	var daysplit1 = parseInt(split1[2]);
+	var ansplit1 = (parseInt(split1[0]) - 2010) *365; //calculate a number of day for the year, take the difference between the year an 2010 to have a reference and convert to int
+	var monsplit1 = parseInt(split1[1]) * 30; //convert month to day and convert to int
+	var daysplit1 = parseInt(split1[2]);//convert days to int
 	var ansplit2 = (parseInt(split2[0]) - 2010) *365;
 	var monsplit2 = parseInt(split2[1]) * 30;
 	var daysplit2 = parseInt(split2[2]);
 
-	var nbday1 = ansplit1 + monsplit1 + daysplit1;
+	var nbday1 = ansplit1 + monsplit1 + daysplit1;//calculate the total of the days
 	var nbday2 = ansplit2 + monsplit2 + daysplit2;
-	var diffday = nbday1 - nbday2;
+	var diffday = nbday1 - nbday2;//calculate the difference in days between the two dates
 
 	
-	var dateF = new date(0,0,0);
+	var dateF = new date(0,0,0);//create a date and initialise it with zeros
 
-	if(diffday >= 0){
-		while(diffday > 365){
+	if(diffday >= 0){//check idf the deadline is in future or not
+		while(diffday > 365){//reconvert to years like doing a modulo
 			diffday = diffday - 365;
-			dateF.year = dateF.year +1;
+			dateF.year = dateF.year +1;//add 1 to the year
 		}while(diffday > 30){
 			diffday = diffday - 30;
-			dateF.month = datef.month +1;
+			dateF.month = datef.month +1;//add 1 to the month
 		}
-		dateF.jour = diffday;
-		diff = dateF.year + "y " + dateF.month + "m " + dateF.jour +"d";
+		dateF.jour = diffday;//take the numbers of days af the diference, it will be smaller than 30
+		diff = dateF.year + "y " + dateF.month + "m " + dateF.jour +"d";//return a string with the date object values
 		return diff;
 		
-	}else{
-		diff='no valid date';
-		window.alert("Votre tache a expiré !");
+	}else{//deadline is in the past
+		diff='no valid date';//no day left
+		window.alert("Votre tache a expiré !");//display an alert
 		return diff;
 		
 	}
 
 }
-
+//main function which manage all the js and call others function
 function main() {
-	var enterButton = document.getElementById("add");
-	var txt = document.getElementById("userText").value;
+	var txt = document.getElementById("userText").value;// value of the title in the text area
 	var ul = document.querySelector("ul");
-	var item = document.getElementsByTagName("li"); 
-	var duration = document.getElementById("timeTask").value;
-	var tab = '\xa0\xa0\xa0\xa0\xa0\xa0\xa0';
-	var dateTime = document.getElementById("date").value;
+	var duration = document.getElementById("timeTask").value;//value of the duaration task which is a number
+	var tab = '\xa0\xa0\xa0\xa0\xa0\xa0\xa0';// just for the beauty of the display to add it in string
+	var dateTime = document.getElementById("date").value;//value of the deadline of the task which is a date
 
 	if(duration<= 0){
-		window.alert("numbers of hours must be a positive number !");
+		window.alert("numbers of hours must be a positive number !");//check positivity of duration, do alert if not
 
 	}
 	else if(txt.length < 2){
-		window.alert("task must be at least a string of two characters !");
+		window.alert("task must be at least a string of two characters !");// check length of the title must be at least 2 chars, do alert if not
 	}
 	else{
 		var li = document.createElement("li"); // create li element
@@ -71,11 +70,11 @@ function main() {
 		txt.value = ""; //set the button field empty
 
 		//add the button to delete
-		var deleteButton = document.createElement("button");
-		deleteButton.setAttribute("style", "height:35px");
-		deleteButton.appendChild(document.createTextNode("X"));
-		li.appendChild(deleteButton);
-		deleteButton.addEventListener("click", deleteElement);
+		var deleteButton = document.createElement("button");//create the button
+		deleteButton.setAttribute("style", "height:35px");//add css attribute
+		deleteButton.appendChild(document.createTextNode("X"));//add the text on the button
+		li.appendChild(deleteButton);//add it to the list
+		deleteButton.addEventListener("click", deleteElement);//call the function delete when the button is clicked
 
 		//add the button to update the current task
 		var updatebutton = document.createElement("button");
@@ -113,28 +112,34 @@ function main() {
 			li.classList.add("delete");
 		}
 		var state = 0;
-		function updateElement(){
-			if(state == 0){
-				
 
+
+		//function which display the text area for update and update the title of the current task
+		function updateElement(){
+			//check a state to display or not the text area for the update
+			if(state == 0){
+				//get the value of the text area
 				var newtxt = document.getElementById("updatetext").value;
+				//remove the current task title
 				li.removeChild(text);
+				//create the new title task
 				var ntext = document.createElement("text");
-				ntext.setAttribute("style", "float: left;font-size:25px; color:green")
+				//put the same css in order to have the same display
+				ntext.setAttribute("style", "float: left;font-size:25px; color:green");
+				//add the text
 				ntext.appendChild(document.createTextNode(newtxt));
-				li.appendChild(ntext); //add the input text value in the li element
-				ul.appendChild(li);
-				newtxt.value = "";
+				//add to the element that is a task
+				li.appendChild(ntext);
+				ul.appendChild(li); //add the task to the list
+				newtxt.value = ""; // reset the variable just to be sure that there is no char concatenation
 				var tmpText = document.getElementById("updatetext");
-				tmpText.setAttribute("style", "");
-				state = 1;
-				console.log(newtxt);
-				console.log(ntext);
-			}else if(state == 1){
+				tmpText.setAttribute("style", "");// display it 
+				state = 1;//update the state variable
+			}else if(state == 1){ //do not display
 				//hide the text area and the button
 				var tmpText = document.getElementById("updatetext");
 				tmpText.setAttribute("style", "display:none");
-				state = 0;
+				state = 0;// update the state
 			}
 		}
 	}
