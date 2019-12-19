@@ -118,11 +118,18 @@ function main() {
 				
 
 				var newtxt = document.getElementById("updatetext").value;
-				text.appendChild(document.createTextNode(newtxt));
+				li.removeChild(text);
+				var ntext = document.createElement("text");
+				ntext.setAttribute("style", "float: left;font-size:25px; color:green")
+				ntext.appendChild(document.createTextNode(newtxt));
+				li.appendChild(ntext); //add the input text value in the li element
+				ul.appendChild(li);
 				newtxt.value = "";
 				var tmpText = document.getElementById("updatetext");
 				tmpText.setAttribute("style", "");
 				state = 1;
+				console.log(newtxt);
+				console.log(ntext);
 			}else if(state == 1){
 				//hide the text area and the button
 				var tmpText = document.getElementById("updatetext");
