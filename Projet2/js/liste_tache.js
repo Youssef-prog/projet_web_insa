@@ -7,6 +7,10 @@ class date{
 	}
 }
 
+
+var numberTask =0;//the numbers of task
+
+
 // function which return string which correspondes to a date and which is the difference between the two string whiche are also date
 function diffString(string1, string2){
 	var split1 = string1.split('-');//parse the string whith '-' because string format is 2019-12-10
@@ -52,6 +56,7 @@ function main() {
 	var duration = document.getElementById("timeTask").value;//value of the duaration task which is a number
 	var tab = '\xa0\xa0\xa0\xa0\xa0\xa0\xa0';// just for the beauty of the display to add it in string
 	var dateTime = document.getElementById("date").value;//value of the deadline of the task which is a date
+	
 
 	if(duration<= 0){
 		window.alert("numbers of hours must be a positive number !");//check positivity of duration, do alert if not
@@ -68,6 +73,7 @@ function main() {
 		li.appendChild(text); //add the input text value in the li element
 		ul.appendChild(li); //add the li to the ul
 		txt.value = ""; //set the button field empty
+		numberTask = numberTask + 1;
 
 		//add the button to delete
 		var deleteButton = document.createElement("button");//create the button
@@ -110,10 +116,12 @@ function main() {
 		//function who delete the element in the list
 		function deleteElement(){
 			li.classList.add("delete");
+			numberTask = numberTask - 1;
+			document.getElementById("numbertask").innerHTML = numberTask;//decrement the task number
 		}
 		var state = 0;
 
-
+		document.getElementById("numbertask").innerHTML = numberTask;//increment the task number
 		//function which display the text area for update and update the title of the current task
 		function updateElement(){
 			//check a state to display or not the text area for the update
@@ -142,6 +150,14 @@ function main() {
 				state = 0;// update the state
 			}
 		}
+	}
+}
+
+
+function displayName(){
+	var names = ['Developper : Yifan Wang','Developper : Yuyuan Yang','Developper : youssef Amari','Developper : Jean-Christophe Sanchez'];
+	for(i in names){
+		document.getElementById("devName").innerHTML = names[i];
 	}
 }
 

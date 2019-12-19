@@ -26,6 +26,9 @@
 		
 				<div class="jsbody">
 					<div>
+						
+						<p id="numbertask" style="float:right; color:white; margin-right: 10%">0</p>
+						<p style="float:right; color:white; margin-right: 10%">Number of tasks : </p>
 						<input id="userText" type="text" placeholder="Votre tache">
 						<button id="add" onclick="main()">Ajouter une tâche</button>
 						<input id="updatetext" type="text" placeholder="Votre tache" style="display:none">
@@ -48,12 +51,16 @@
 				</div>
 		
 			</div>
+
+			<p id="devName" style="margin-bottom: 50px; color:white"></p>
+
   <script src="js/liste_tache.js"></script>
   <script src="js/snow.js"></script>
   <script type="text/javascript">
 	window.onload = function(){
 		snow.init(10);
 	};
+	window.onload = displayName();
 </script>
 </body>
 </html>
