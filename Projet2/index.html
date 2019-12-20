@@ -27,8 +27,10 @@
 				<div class="jsbody">
 					<div>
 						
-						<p id="numbertask" style="float:right; color:white; margin-right: 10%">0</p>
-						<p style="float:right; color:white; margin-right: 10%">Number of tasks : </p>
+						<p id="numbertask" style="float:right; color:white; margin-right: 5%">0</p>
+						<p style="float:right; color:white; margin-right: 5%">Number of tasks : </p>
+						<p id="dtitre" style="float:right; color:white; margin-right: 5%">0</p>
+						<p style="float:right; color:white; margin-right: 5%">Dernier titre creer : </p>
 						<input id="userText" type="text" placeholder="Votre tache">
 						<button id="add" onclick="main()">Ajouter une tâche</button>
 						<input id="updatetext" type="text" placeholder="Votre tache" style="display:none">
@@ -60,7 +62,7 @@
 	window.onload = function(){
 		snow.init(10);
 	};
-	window.onload = displayName();
+	displayName();
 </script>
 </body>
 </html>

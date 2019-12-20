@@ -56,8 +56,6 @@ function main() {
 	var duration = document.getElementById("timeTask").value;//value of the duaration task which is a number
 	var tab = '\xa0\xa0\xa0\xa0\xa0\xa0\xa0';// just for the beauty of the display to add it in string
 	var dateTime = document.getElementById("date").value;//value of the deadline of the task which is a date
-	
-
 	if(duration<= 0){
 		window.alert("numbers of hours must be a positive number !");//check positivity of duration, do alert if not
 
@@ -73,13 +71,13 @@ function main() {
 		li.appendChild(text); //add the input text value in the li element
 		ul.appendChild(li); //add the li to the ul
 		txt.value = ""; //set the button field empty
-		numberTask = numberTask + 1;
+		numberTask = numberTask + 1;//increment the task number
 
 		//add the button to delete
 		var deleteButton = document.createElement("button");//create the button
 		deleteButton.setAttribute("style", "height:35px");//add css attribute
 		deleteButton.appendChild(document.createTextNode("X"));//add the text on the button
-		li.appendChild(deleteButton);//add it to the list
+		li.appendChild(deleteButton);//add it to the listincrement the task number
 		deleteButton.addEventListener("click", deleteElement);//call the function delete when the button is clicked
 
 		//add the button to update the current task
@@ -121,7 +119,16 @@ function main() {
 		}
 		var state = 0;
 
-		document.getElementById("numbertask").innerHTML = numberTask;//increment the task number
+		document.getElementById("numbertask").innerHTML = numberTask;//display the task number
+
+		const array1 = [];
+		array1.push(txt);//add the new title
+		//display an the last element
+		for (const element of array1) {
+			document.getElementById("dtitre").innerHTML = element;
+		}
+
+
 		//function which display the text area for update and update the title of the current task
 		function updateElement(){
 			//check a state to display or not the text area for the update
@@ -154,13 +161,17 @@ function main() {
 }
 
 
+function shuffle(array) {
+	array.sort(() => Math.random() - 0.5);
+  }
+
 function displayName(){
 	var names = ['Developper : Yifan Wang','Developper : Yuyuan Yang','Developper : youssef Amari','Developper : Jean-Christophe Sanchez'];
-	for(i in names){
-		document.getElementById("devName").innerHTML = names[i];
+	shuffle(names);
+	for(i in names ){
+			document.getElementById("devName").innerHTML = names[i];
+		  }
 	}
-}
-
 
 
 
